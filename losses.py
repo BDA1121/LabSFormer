@@ -1,3 +1,7 @@
+## Harshil Bhojwani and Dhanush Adithya
+## CS 7180 Advanced Perception
+## 12/13/2024
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F

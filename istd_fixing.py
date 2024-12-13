@@ -1,3 +1,7 @@
+## Harshil Bhojwani and Dhanush Adithya
+## CS 7180 Advanced Perception
+## 12/13/2024
+
 import numpy as np
 import cv2
 from sklearn.linear_model import LinearRegression

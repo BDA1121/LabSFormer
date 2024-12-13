@@ -1,3 +1,7 @@
+## Harshil Bhojwani and Dhanush Adithya
+## CS 7180 Advanced Perception
+## 12/13/2024
+
 from PIL import Image
 import os
 import numpy as np
