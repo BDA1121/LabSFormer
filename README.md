@@ -3,6 +3,10 @@ By- Dhanush Adithya, Harshil Bhojwani.
 
 OS - Linux
 
+run pip install -r requirements.txt to set up the environment and required packages
+
+the dataset used is ISTD [link](https://drive.google.com/file/d/1I0qw-65KBA6np8vIZzO6oeiOvcDBttAY/view)
+
 for testing run python test.py and optionally --save_img and --cal_metrics for saving or calculating values
 
 for training run python train.py --warmup --win_size 8 --train_ps 256
