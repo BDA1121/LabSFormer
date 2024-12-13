@@ -1030,6 +1030,8 @@ class ShadowFormer(nn.Module):
                             token_projection=token_projection,token_mlp=token_mlp,se_layer=se_layer)
         self.dowsample_2 = dowsample(embed_dim*4, embed_dim*8)
 
+
+        # added this encoder layer with the appropriate sizes
         self.encoderlayer_3 = BasicShadowFormer(dim=embed_dim*8,
                             output_dim=embed_dim*8,
                             input_resolution=(img_size // (2 ** 3), img_size // (2 ** 3)),
@@ -1060,6 +1062,8 @@ class ShadowFormer(nn.Module):
                             token_projection=token_projection,token_mlp=token_mlp,se_layer=se_layer)
         # # Decoder
         self.upsample_0 = upsample(embed_dim*16, embed_dim*8)
+
+        # added this decoder layer with the appropriate sizes
         self.decoderlayer_0 = BasicShadowFormer(dim=embed_dim*16,
                             output_dim=embed_dim*16,
                             input_resolution=(img_size // (2 ** 3), img_size // (2 ** 3)),

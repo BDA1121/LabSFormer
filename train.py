@@ -112,7 +112,7 @@ else:
     scheduler.step()
 
 
-######### Loss ###########
+######### Losses ###########
 # criterion = CharbonnierLoss().cuda()
 # criterion = LABLoss().cuda()
 # criterion = PerceptualLoss().cuda()
@@ -167,6 +167,8 @@ for epoch in range(start_epoch, opt.nepoch + 1):
             loss = criterion(restored, target)
         loss_scaler(
                 loss, optimizer,parameters=model_restoration.parameters())
+        
+        # added gradient clipping to stabilize training
         torch.nn.utils.clip_grad_norm_(model_restoration.parameters(), max_norm=1)
         epoch_loss +=loss.item()
         #### Evaluation ####
